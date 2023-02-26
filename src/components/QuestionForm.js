@@ -16,7 +16,11 @@ const QuestionForm = ({ setYour, setData }) => {
   };
   return (
     <Form onSubmit={onSubmit}>
-      <input placeholder='' value={question} onChange={onChange} />
+      <input
+        placeholder='이곳에 질문해주세요'
+        value={question}
+        onChange={onChange}
+      />
       <button onClick={onSubmit}>묻기!</button>
     </Form>
   );

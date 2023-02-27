@@ -1,6 +1,7 @@
 # Yes Or No
 
-질문을 하면 랜덤으로 예 / 아니오 에 해당하는 답을 돌려주는 사이트입니다.<br>
+>질문을 하면 랜덤으로 예 / 아니오 에 해당하는 답을 돌려주는 사이트입니다.<br>
+[사이트 링크](https://938938.github.io/yesorno/) / [기록 블로그](https://velog.io/@938938/Toy-YesOrNo-.1)
 
 
 <center>

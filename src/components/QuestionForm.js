@@ -2,25 +2,24 @@ import React, { useRef, useState } from 'react';
 import Form from '../UI/Form';
 import Options from '../UI/Options';
 
+const defaultKeyword = [
+  '오늘 치킨을 먹을까?',
+  '운동을 쉬어도 될까?',
+  '지금 할까?',
+  '조금 쉴까?',
+  '오늘 전화를 할까?',
+];
+
 const QuestionForm = ({ setYour, setData }) => {
   const inputRef = useRef();
   const [on, setOn] = useState(false);
   const [selected, setSelected] = useState(-1);
-  const defaultKeyword = [
-    '오늘 치킨을 먹을까?',
-    '운동을 쉬어도 될까?',
-    '지금 할까?',
-    '조금 쉴까?',
-    '오늘 전화를 할까?',
-  ];
+  const [question, setQuestion] = useState('');
+  const [option, setOption] = useState(defaultKeyword);
 
   const onFocus = () => {
     setOn(true);
   };
-  // input창 클릭했을 때 focus를 주고 -> 다른 곳을 클릭하면 blur 한 다음 focus값이 있냐없냐에 따라서 option을 주기...........
-
-  const [question, setQuestion] = useState('');
-  const [option, setOption] = useState(defaultKeyword);
 
   const onChange = (e) => {
     const { value } = e.target;

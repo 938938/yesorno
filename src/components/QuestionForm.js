@@ -26,6 +26,7 @@ const QuestionForm = ({ setYour, setData }) => {
     const { value } = e.target;
     setQuestion(value);
     setOption(defaultKeyword.filter((ele) => ele.includes(value)));
+    setSelected(-1);
   };
   const onClick = (clicked) => {
     setQuestion(clicked);
@@ -49,7 +50,7 @@ const QuestionForm = ({ setYour, setData }) => {
     } else if (e.key === 'ArrowUp' && selected > 0) {
       setSelected(selected - 1);
     }
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && selected >= 0) {
       onClick(option[selected]);
     }
   };

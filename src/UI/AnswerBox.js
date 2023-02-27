@@ -42,6 +42,7 @@ const AnswerBoxDiv = styled.div`
   transform: rotate(-4deg);
   background-color: ${WHITE};
   text-align: center;
+  z-index: 0;
 `;
 
 const AnswerCard = styled.div`
@@ -73,6 +74,6 @@ const Cat = styled.div`
 const Question = styled.div`
   position: absolute;
   top: -25px;
-  right: -35px;
+  right: -25px;
   transform: rotate(4deg);
 `;

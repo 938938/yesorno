@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import { MIDNIGHTEXPRESS, WHISPER } from '../global/globalColor';
 
 const Form = (props) => {
-  return <FormBox>{props.children}</FormBox>;
+  return (
+    <FormBox>
+      {props.children}
+    </FormBox>
+  );
 };
 
 export default Form;
@@ -12,6 +16,7 @@ const FormBox = styled.form`
   width: 100%;
   display: flex;
   align-items: flex-start;
+  position: relative;
 
   input {
     width: 505px;
@@ -43,3 +48,4 @@ const FormBox = styled.form`
     }
   }
 `;
+

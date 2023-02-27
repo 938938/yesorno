@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     font-size: 1rem;
     color: ${MIDNIGHTEXPRESS};
+    list-style: none;
   }
   body{
     display: flex;

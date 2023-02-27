@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/yesorno/static/js/main.18ebcc01.js",
+    "main.js": "/yesorno/static/js/main.dee404ed.js",
     "index.html": "/yesorno/index.html",
-    "main.18ebcc01.js.map": "/yesorno/static/js/main.18ebcc01.js.map"
+    "main.dee404ed.js.map": "/yesorno/static/js/main.dee404ed.js.map"
   },
   "entrypoints": [
-    "static/js/main.18ebcc01.js"
+    "static/js/main.dee404ed.js"
   ]
 }

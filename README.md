@@ -1,6 +1,7 @@
 # Yes Or No
 
-질문을 하면 랜덤으로 예 / 아니오 에 해당하는 답을 돌려주는 사이트입니다.
+질문을 하면 랜덤으로 예 / 아니오 에 해당하는 답을 돌려주는 사이트입니다.<br>
+
 
 <center>
 <img width="300" alt="기본화면" src="https://user-images.githubusercontent.com/92746200/221403743-12f50e4f-a7e7-4c76-88a8-428bafff12f8.png">

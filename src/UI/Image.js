@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { WHISPER } from '../global/globalColor';
+import { MIDNIGHTEXPRESS } from '../global/globalColor';
 
 const Image = (props) => {
   return <ImageBox>{props.children}</ImageBox>;
@@ -12,9 +12,9 @@ const ImageBox = styled.div`
   img {
     max-width: 400px;
     max-height: 300px;
-    border-radius: 10px;
     overflow: hidden;
     padding: 10px;
-    border: 2px solid ${WHISPER};
+    border: 1px solid ${MIDNIGHTEXPRESS};
+    margin-top:10px;
   }
 `;

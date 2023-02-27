@@ -20,7 +20,8 @@ export default AppBox;
 
 const AppBg = styled.div`
   position: relative;
-  width: 100vw;
+  /* width: 100vw; */
+  width: 600px;
   max-width: 600px;
   min-width: 300px;
   height: 90vh;
@@ -34,6 +35,12 @@ const AppBg = styled.div`
         ? `${RADICALRED}`
         : `${DARKTURQUOISE}`
       : `${WHITE}`};
+  transition: all 1s;
+
+  @media only screen and (max-width: 768px) {
+    transform: rotate(0);
+    transition: all 1s;
+  }
 `;
 
 const AppCard = styled(AppBg)`
@@ -42,4 +49,9 @@ const AppCard = styled(AppBg)`
   left: 0;
   background-color: white;
   transform: rotate(2deg);
+  transition: all 1s;
+  @media only screen and (max-width: 768px) {
+    transform: rotate(0);
+    transition: all 1s;
+  }
 `;

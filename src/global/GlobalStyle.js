@@ -8,9 +8,8 @@ const GlobalStyle = createGlobalStyle`
     border:0;
     padding: 0;
     margin: 0;
-    color:black;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 1rem;
     color: ${MIDNIGHTEXPRESS};
   }
   body{

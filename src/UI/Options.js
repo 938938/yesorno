@@ -3,12 +3,7 @@ import styled from 'styled-components';
 import { MIDNIGHTEXPRESS, WHISPER, WHITE } from '../global/globalColor';
 
 const Options = (props) => {
-  return (
-    <OptionBox>
-      {props.children}
-      <CloseBtn onClick={() => props.setOn(false)}>X</CloseBtn>
-    </OptionBox>
-  );
+  return <OptionBox>{props.children}</OptionBox>;
 };
 
 export default Options;
@@ -35,20 +30,23 @@ const OptionBox = styled.ul`
       border-bottom: 0;
     }
   }
-`;
+  > .selected {
+    background-color: ${WHISPER};
+  }
 
-const CloseBtn = styled.button`
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  font-size: 10px;
-  line-height: 10px;
-  border: 2px solid ${MIDNIGHTEXPRESS};
-  background-color: ${WHISPER};
-  cursor: pointer;
-  &:hover {
-    background-color: ${MIDNIGHTEXPRESS};
+  > button {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    font-size: 10px;
+    line-height: 10px;
+    border: 2px solid ${MIDNIGHTEXPRESS};
+    background-color: ${WHISPER};
+    cursor: pointer;
+    &:hover {
+      background-color: ${MIDNIGHTEXPRESS};
+    }
   }
 `;

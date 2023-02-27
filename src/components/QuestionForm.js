@@ -5,6 +5,7 @@ import Options from '../UI/Options';
 const QuestionForm = ({ setYour, setData }) => {
   const inputRef = useRef();
   const [on, setOn] = useState(false);
+  const [selected, setSelected] = useState(-1);
   const defaultKeyword = [
     '오늘 치킨을 먹을까?',
     '운동을 쉬어도 될까?',
@@ -42,8 +43,19 @@ const QuestionForm = ({ setYour, setData }) => {
     inputRef.current.blur();
   };
 
+  const onKeyUp = (e) => {
+    if (e.key === 'ArrowDown' && selected < option.length - 1) {
+      setSelected(selected + 1);
+    } else if (e.key === 'ArrowUp' && selected > 0) {
+      setSelected(selected - 1);
+    }
+    if (e.key === 'Enter') {
+      onClick(option[selected]);
+    }
+  };
+
   return (
-    <div>
+    <div onKeyUp={onKeyUp}>
       <Form onSubmit={onSubmit}>
         <input
           ref={inputRef}
@@ -58,11 +70,16 @@ const QuestionForm = ({ setYour, setData }) => {
         <Options setOn={setOn}>
           {option.map((ele, idx) => {
             return (
-              <li key={idx} onClick={() => onClick(ele)}>
+              <li
+                key={idx}
+                className={selected === idx ? 'selected' : ''}
+                onClick={() => onClick(ele)}
+              >
                 {ele}
               </li>
             );
           })}
+          <button onClick={() => setOn(false)}>X</button>
         </Options>
       )}
     </div>

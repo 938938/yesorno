@@ -18,7 +18,7 @@ const AppBox = (props) => {
 
 export default AppBox;
 
-const AppBg = styled.div`
+const AppBg = styled.section`
   position: relative;
   /* width: 100vw; */
   width: 600px;

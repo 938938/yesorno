@@ -32,7 +32,7 @@ const AnswerBox = (props) => {
 
 export default AnswerBox;
 
-const AnswerBoxDiv = styled.div`
+const AnswerBoxDiv = styled.section`
   position: absolute;
   left: 20px;
   bottom: 10px;

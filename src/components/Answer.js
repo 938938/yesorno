@@ -1,4 +1,5 @@
 import React from 'react';
+import AnswerText from '../UI/AnswerText';
 import Image from '../UI/Image';
 
 const Answer = ({ data, your }) => {
@@ -35,15 +36,15 @@ const Answer = ({ data, your }) => {
   return (
     <div>
       <div className='question'>
-        <h2>Q: {your}?</h2>
+        <AnswerText>Q: {your}?</AnswerText>
       </div>
       <div>
-        <h2>
+        <AnswerText>
           A:{' '}
           {data.answer === 'no'
             ? no[Math.floor(Math.random() * no.length)]
             : yes[Math.floor(Math.random() * yes.length)]}
-        </h2>
+        </AnswerText>
         <div>
           <Image>
             <img

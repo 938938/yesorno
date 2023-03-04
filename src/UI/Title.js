@@ -7,7 +7,7 @@ const Title = (props) => {
 
 export default Title;
 
-const TitleBox = styled.div`
+const TitleBox = styled.header`
   margin-bottom: 40px;
   h1 {
     font-size: 50px;

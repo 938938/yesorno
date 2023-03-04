@@ -41,6 +41,7 @@ const QuestionForm = ({ setYour, setData }) => {
     setOption(defaultKeyword);
     setOn(false);
     inputRef.current.blur();
+    setSelected(-1);
   };
 
   const onKeyUp = (e) => {
@@ -55,7 +56,7 @@ const QuestionForm = ({ setYour, setData }) => {
   };
 
   return (
-    <div onKeyUp={onKeyUp}>
+    <section onKeyUp={onKeyUp}>
       <Form onSubmit={onSubmit}>
         <input
           ref={inputRef}
@@ -82,7 +83,7 @@ const QuestionForm = ({ setYour, setData }) => {
           <button onClick={() => setOn(false)}>X</button>
         </Options>
       )}
-    </div>
+    </section>
   );
 };
 

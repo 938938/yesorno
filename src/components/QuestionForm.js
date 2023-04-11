@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { set } from '../store/dataSlice';
 import Form from '../UI/Form';
 import Options from '../UI/Options';
 
@@ -10,12 +12,13 @@ const defaultKeyword = [
   '오늘 전화를 할까?',
 ];
 
-const QuestionForm = ({ setYour, setData }) => {
+const QuestionForm = ({ setYour }) => {
   const inputRef = useRef();
   const [on, setOn] = useState(false);
   const [selected, setSelected] = useState(-1);
   const [question, setQuestion] = useState('');
   const [option, setOption] = useState(defaultKeyword);
+  const dispatch = useDispatch();
 
   const onFocus = () => {
     setOn(true);
@@ -35,7 +38,7 @@ const QuestionForm = ({ setYour, setData }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (question === '') return;
-    setData(undefined);
+    dispatch(set({ answer: '', image: '' }));
     setYour(question);
     setQuestion('');
     setOption(defaultKeyword);

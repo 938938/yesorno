@@ -6,14 +6,14 @@ import CATBACK from '../images/cat-back.png';
 import PUZZLED from '../images/puzzled.png';
 
 const AnswerBox = (props) => {
-  const data = props.data;
+  const answer = props.answer;
   return (
     <AnswerBoxDiv>
       <Question>
         <img src={PUZZLED} alt='궁금해하는 이모티콘. 답변칸의 상단에 위치.' />
       </Question>
       <Cat>
-        {data ? (
+        {answer ? (
           <img
             src={CATPOT}
             alt='항아리를 안은 고양이 이미지, 답변이 왔을 때 표시'
@@ -53,11 +53,11 @@ const AnswerCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   transform: rotate(4deg);
 
-  .question{
-    margin-bottom:20px;
+  .question {
+    margin-bottom: 20px;
   }
 `;
 

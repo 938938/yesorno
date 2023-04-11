@@ -8,9 +8,9 @@ import {
 } from '../global/globalColor';
 
 const AppBox = (props) => {
-  const data = props.data;
+  const answer = props.answer;
   return (
-    <AppBg data={data}>
+    <AppBg answer={answer}>
       <AppCard>{props.children}</AppCard>
     </AppBg>
   );
@@ -30,8 +30,8 @@ const AppBg = styled.section`
   border: 3px solid ${MIDNIGHTEXPRESS};
   transform: rotate(-2deg);
   background-color: ${(props) =>
-    props.data
-      ? props.data.answer === 'no'
+    props.answer
+      ? props.answer === 'no'
         ? `${RADICALRED}`
         : `${DARKTURQUOISE}`
       : `${WHITE}`};

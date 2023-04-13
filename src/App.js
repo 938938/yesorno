@@ -15,7 +15,6 @@ function App() {
   const dispatch = useDispatch();
 
   const answer = useSelector((state) => {
-    console.log(state);
     return state.data.answer;
   });
   const urlImg = useSelector((state) => {

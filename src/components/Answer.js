@@ -2,7 +2,7 @@ import React from 'react';
 import AnswerText from '../UI/AnswerText';
 import Image from '../UI/Image';
 
-const Answer = ({ data, your }) => {
+const Answer = ({ answer, urlImg, your }) => {
   const yes = [
     '응!',
     '좋아!',
@@ -41,16 +41,16 @@ const Answer = ({ data, your }) => {
       <div>
         <AnswerText>
           A:{' '}
-          {data.answer === 'no'
+          {answer === 'no'
             ? no[Math.floor(Math.random() * no.length)]
             : yes[Math.floor(Math.random() * yes.length)]}
         </AnswerText>
         <div>
           <Image>
             <img
-              src={data.image}
+              src={urlImg}
               alt={
-                data.answer === 'no'
+                answer === 'no'
                   ? '부정을 나타내는 gif 파일'
                   : '긍정을 나타내는 gif 파일'
               }

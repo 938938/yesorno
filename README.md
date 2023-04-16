@@ -14,6 +14,8 @@
 <img width="600" alt="결과 화면" src="https://user-images.githubusercontent.com/92746200/221403853-e7932efc-9f81-482c-b5e6-7b10f2524cc0.png">
 <br>
 
+![사용 영상](https://user-images.githubusercontent.com/92746200/232323087-2cd747fa-e35d-4117-8c36-14e8b9a2b8d9.gif)
+
 </center>
 
 ## 사용방법

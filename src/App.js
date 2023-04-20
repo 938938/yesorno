@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDataAPI } from './API/api';
 import Answer from './components/Answer';
 import Question from './components/QuestionForm';
-import { set } from './store/dataSlice';
+import { asyncAPI } from './store/dataSlice';
 import AnswerBox from './UI/AnswerBox';
 import AppBox from './UI/AppBox';
 import Loader from './UI/Loader';
@@ -23,8 +22,7 @@ function App() {
   });
 
   const getData = async () => {
-    let temp = await getDataAPI();
-    dispatch(set({ answer: temp.answer, image: temp.image }));
+    dispatch(asyncAPI());
   };
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { set } from '../store/dataSlice';
+import { asyncAPI } from '../store/dataSlice';
 import Form from '../UI/Form';
 import Options from '../UI/Options';
 
@@ -38,7 +38,7 @@ const QuestionForm = ({ setYour }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (question === '') return;
-    dispatch(set({ answer: '', image: '' }));
+    dispatch(asyncAPI);
     setYour(question);
     setQuestion('');
     setOption(defaultKeyword);

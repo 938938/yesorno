@@ -23,7 +23,7 @@ export default dataSlice;
 export const { set } = dataSlice.actions;
 
 export const asyncAPI = createAsyncThunk(
-  'auth/profile',
+  'data',
   async (_, thunkAPI) => {
     try {
       const data = await axios

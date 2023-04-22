@@ -6,9 +6,13 @@ import {
   DARKTURQUOISE,
   WHITE,
 } from '../global/globalColor';
+import { useSelector } from 'react-redux';
 
 const AppBox = (props) => {
-  const answer = props.answer;
+  const answer = useSelector((state) => {
+    return state.data.answer;
+  });
+
   return (
     <AppBg answer={answer}>
       <AppCard>{props.children}</AppCard>

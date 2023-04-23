@@ -7,6 +7,8 @@ const dataSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(asyncAPI.pending, (state, action) => {
       // 대기상태일 때 state 상태
+      state.answer = '';
+      state.image = '';
     });
     builder.addCase(asyncAPI.fulfilled, (state, action) => {
       state.answer = action.payload.answer;

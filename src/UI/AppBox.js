@@ -38,7 +38,7 @@ const AppBg = styled.section`
       ? props.answer === 'no'
         ? `${RADICALRED}`
         : `${DARKTURQUOISE}`
-      : `${WHITE}`};
+      : `${MIDNIGHTEXPRESS}`};
   transition: all 1s;
 
   @media only screen and (max-width: 768px) {

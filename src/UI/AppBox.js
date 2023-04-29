@@ -4,7 +4,6 @@ import {
   MIDNIGHTEXPRESS,
   RADICALRED,
   DARKTURQUOISE,
-  WHITE,
 } from '../global/globalColor';
 import { useSelector } from 'react-redux';
 

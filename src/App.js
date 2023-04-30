@@ -1,13 +1,11 @@
-import Main from './Pages/Main';
+import { RouterProvider } from 'react-router-dom';
 import AppBox from './UI/AppBox';
-import ChangeBtn from './UI/ChangeBtn';
+import router from './router';
 
 function App() {
   return (
     <AppBox>
-      {/* <Bored /> */}
-      <ChangeBtn />
-      <Main />
+      <RouterProvider router={router} />
     </AppBox>
   );
 }

@@ -10,11 +10,13 @@ export default Image;
 
 const ImageBox = styled.div`
   img {
+    /* width: 400px;
+    height: 300px; */
     max-width: 400px;
     max-height: 300px;
     overflow: hidden;
     padding: 10px;
     border: 1px solid ${MIDNIGHTEXPRESS};
-    margin-top:10px;
+    margin-top: 10px;
   }
 `;

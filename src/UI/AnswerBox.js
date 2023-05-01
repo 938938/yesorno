@@ -4,9 +4,11 @@ import { MIDNIGHTEXPRESS, WHITE } from '../global/globalColor';
 import CATPOT from '../images/cat-pot.png';
 import CATBACK from '../images/cat-back.png';
 import PUZZLED from '../images/puzzled.png';
+import { useSelector } from 'react-redux';
 
 const AnswerBox = (props) => {
-  const answer = props.answer;
+  const answer = useSelector((state) => state.data.answer);
+  // const answer = props.answer;
   return (
     <AnswerBoxDiv>
       <Question>

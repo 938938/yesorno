@@ -1,19 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  MIDNIGHTEXPRESS,
-  RADICALRED,
-  DARKTURQUOISE,
-} from '../global/globalColor';
+import { CREAMGRAY, MIDNIGHTEXPRESS, WHISPER } from '../global/globalColor';
 import { useSelector } from 'react-redux';
 
 const AppBox = (props) => {
-  const answer = useSelector((state) => {
-    return state.data.answer;
+  const bgColor = useSelector((state) => {
+    return state.data.bgColor;
   });
 
   return (
-    <AppBg answer={answer}>
+    <AppBg bgColor={bgColor}>
       <AppCard>{props.children}</AppCard>
     </AppBg>
   );
@@ -33,11 +29,7 @@ const AppBg = styled.section`
   border: 3px solid ${MIDNIGHTEXPRESS};
   transform: rotate(-2deg);
   background-color: ${(props) =>
-    props.answer
-      ? props.answer === 'no'
-        ? `${RADICALRED}`
-        : `${DARKTURQUOISE}`
-      : `${MIDNIGHTEXPRESS}`};
+    props.bgColor ? props.bgColor : `${CREAMGRAY}`};
   transition: all 1s;
 
   @media only screen and (max-width: 768px) {

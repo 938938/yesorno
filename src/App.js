@@ -1,11 +1,10 @@
-import { RouterProvider } from 'react-router-dom';
 import AppBox from './UI/AppBox';
-import router from './router';
+import Main from './Pages/Main';
 
 function App() {
   return (
     <AppBox>
-      <RouterProvider router={router} />
+      <Main />
     </AppBox>
   );
 }

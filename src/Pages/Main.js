@@ -13,9 +13,6 @@ const Main = () => {
   const answer = useSelector((state) => {
     return state.data.answer;
   });
-  const urlImg = useSelector((state) => {
-    return state.data.image;
-  });
   const getData = async () => {
     dispatch(asyncAPI());
   };
@@ -33,13 +30,7 @@ const Main = () => {
         <p>&#62; 예/아니오로 답할 수 있는 질문을 던져주세요.</p>
       </Title>
       <QuestionForm setYour={setYour} />
-      <AnswerBox answer={answer}>
-        {answer ? (
-          <Answer answer={answer} urlImg={urlImg} your={your} />
-        ) : (
-          <Loader />
-        )}
-      </AnswerBox>
+      <AnswerBox>{answer ? <Answer your={your} /> : <Loader />}</AnswerBox>
     </>
   );
 };

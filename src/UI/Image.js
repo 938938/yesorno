@@ -15,6 +15,6 @@ const ImageBox = styled.div`
     overflow: hidden;
     padding: 10px;
     border: 1px solid ${MIDNIGHTEXPRESS};
-    margin-top:10px;
+    margin-top: 10px;
   }
 `;

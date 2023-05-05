@@ -8,17 +8,17 @@ import AnswerBox from './UI/AnswerBox';
 import AppBox from './UI/AppBox';
 import Loader from './UI/Loader';
 import Title from './UI/Title';
+import { RootState } from './store/store';
 
 function App() {
   const [your, setYour] = useState('');
 
   const dispatch = useDispatch();
 
-  const answer = useSelector((state) => {
-    console.log(state);
+  const answer = useSelector((state: RootState) => {
     return state.data.answer;
   });
-  const urlImg = useSelector((state) => {
+  const urlImg = useSelector((state: RootState) => {
     return state.data.image;
   });
 

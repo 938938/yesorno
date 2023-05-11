@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = `https://yesno.wtf/api`
+const URL = `https://yesno.wtf/api`;
 
 export const getDataAPI = () => {
   try {

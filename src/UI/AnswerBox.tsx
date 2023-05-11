@@ -5,7 +5,7 @@ import CATPOT from '../images/cat-pot.png';
 import CATBACK from '../images/cat-back.png';
 import PUZZLED from '../images/puzzled.png';
 
-const AnswerBox = (props) => {
+const AnswerBox = (props: any) => {
   const answer = props.answer;
   return (
     <AnswerBoxDiv>

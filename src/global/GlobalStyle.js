@@ -16,9 +16,13 @@ const GlobalStyle = createGlobalStyle`
   body{
     display: flex;
     justify-content: center;
-    padding:30px;
     background-color: ${WHISPER};
+
+    @media only screen and (max-width: 768px) {
+      display:block;
+    }
   }
+
 `;
 
 export default GlobalStyle;

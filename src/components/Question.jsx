@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { asyncAPI } from '../store/dataSlice';
+import { asyncAPI } from '../store/answerSlice';
 import Form from '../UI/Form';
 import Options from '../UI/Options';
 

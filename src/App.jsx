@@ -1,11 +1,13 @@
-import AppBox from './UI/AppBox';
+import * as S from './App.style';
 import Main from './Pages/Main';
 
 function App() {
   return (
-    <AppBox>
-      <Main />
-    </AppBox>
+    <S.AppBack>
+      <S.AppFront>
+        <Main />
+      </S.AppFront>
+    </S.AppBack>
   );
 }
 

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import * as S from './Main.style';
 import { useDispatch, useSelector } from 'react-redux';
-import { asyncAPI } from '../store/dataSlice';
-import Title from '../UI/Title';
-import QuestionForm from '../components/QuestionForm';
+import { asyncAPI } from '../store/answerSlice';
+
+import QuestionForm from '../components/Question';
 import AnswerBox from '../UI/AnswerBox';
 import Answer from '../components/Answer';
 import Loader from '../UI/Loader';
@@ -23,14 +24,14 @@ const Main = () => {
   }, [your]);
   return (
     <>
-      <Title>
+      <S.Title>
         <h1>
           YES <span>or</span> No !
         </h1>
         <p>&#62; 예/아니오로 답할 수 있는 질문을 던져주세요.</p>
-      </Title>
+      </S.Title>
       <QuestionForm setYour={setYour} />
-      <AnswerBox>{answer ? <Answer your={your} /> : <Loader />}</AnswerBox>
+      <AnswerBox >{answer ? <Answer your={your} /> : <Loader />}</AnswerBox>
     </>
   );
 };

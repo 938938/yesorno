@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import dataSlice from './dataSlice';
+import answerSlice from './answerSlice';
 import activeSlice from './activeSlice';
+import askSlice from './askSlice';
 
 const store = configureStore({
   reducer: {
-    data: dataSlice.reducer,
+    answer: answerSlice.reducer,
+    ask: askSlice.reducer,
     active: activeSlice.reducer,
   },
 });

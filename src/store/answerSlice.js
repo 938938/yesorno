@@ -41,8 +41,8 @@ const no = [
   '아냐!',
 ];
 
-const dataSlice = createSlice({
-  name: 'dataSlice',
+const answerSlice = createSlice({
+  name: 'answerSlice',
   initialState: { answer: '', image: '', bgColor: '' },
   extraReducers: (builder) => {
     builder.addCase(asyncAPI.pending, (state, action) => {
@@ -71,13 +71,13 @@ const dataSlice = createSlice({
       state.bgColor =
         action.payload.answer === 'no' ? `${RADICALRED}` : `${DARKTURQUOISE}`;
     });
-    // builder.addCase(asyncAPI.rejected, (state, action) => {
-    //   state.answer = '답변을 받아오는 것에 실패했습니다.';
-    // });
+    builder.addCase(asyncAPI.rejected, (state, action) => {
+      state.answer = '답변을 받아오는 것에 실패했습니다.';
+    });
   },
 });
 
-export default dataSlice;
+export default answerSlice;
 
 export const asyncAPI = createAsyncThunk('data', async (_, thunkAPI) => {
   try {

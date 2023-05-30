@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import LOADING from '../images/loadingCat.png';
+import SPINNER from '../images/spinner.gif';
 import {
   MIDNIGHTEXPRESS,
   RADICALRED,
@@ -46,9 +46,8 @@ const answerSlice = createSlice({
   initialState: { answer: '', image: '', bgColor: '' },
   extraReducers: (builder) => {
     builder.addCase(asyncAPI.pending, (state, action) => {
-      // 대기상태일 때 state 상태
       state.answer = '답변을 불러오는 중입니다.';
-      state.image = LOADING;
+      state.image = SPINNER;
       state.bgColor = `${MIDNIGHTEXPRESS}`;
     });
     builder.addCase(asyncAPI.fulfilled, (state, action) => {

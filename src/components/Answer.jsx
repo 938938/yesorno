@@ -1,15 +1,15 @@
-import React from 'react';
 import AnswerText from '../UI/AnswerText';
 import Image from '../UI/Image';
 import { useSelector } from 'react-redux';
 
-const Answer = ({ your }) => {
-  const answer = useSelector((state) => state.data.answer);
-  const urlImg = useSelector((state) => state.data.image);
+const Answer = () => {
+  const answer = useSelector((state) => state.answer.answer);
+  const urlImg = useSelector((state) => state.answer.image);
+  const ask = useSelector((state) => state.ask.ask);
   return (
     <div>
       <div className='question'>
-        <AnswerText>Q: {your}?</AnswerText>
+        <AnswerText>Q: {ask}?</AnswerText>
       </div>
       <div>
         <AnswerText>A: {answer}</AnswerText>

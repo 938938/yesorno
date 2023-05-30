@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { asyncAPI } from '../store/answerSlice';
+import { setAsk } from '../store/askSlice';
 import Form from '../UI/Form';
 import Options from '../UI/Options';
 
@@ -12,7 +13,7 @@ const defaultKeyword = [
   '오늘 전화를 할까?',
 ];
 
-const QuestionForm = ({ setYour }) => {
+const QuestionForm = () => {
   const inputRef = useRef();
   const [on, setOn] = useState(false);
   const [selected, setSelected] = useState(-1);
@@ -38,8 +39,8 @@ const QuestionForm = ({ setYour }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (question === '') return;
-    dispatch(asyncAPI);
-    setYour(question);
+    dispatch(asyncAPI());
+    dispatch(setAsk(question));
     setQuestion('');
     setOption(defaultKeyword);
     setOn(false);

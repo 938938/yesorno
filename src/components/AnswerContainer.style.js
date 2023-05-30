@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 import { MIDNIGHTEXPRESS, WHITE } from '../global/globalColor';
-import CATPOT from '../images/cat-pot.png';
-import CATBACK from '../images/cat-back.png';
-import PUZZLED from '../images/puzzled.png';
 
-export const AnswerBoxDiv = styled.section`
+export const AnswerContainer = styled.section`
   position: absolute;
   left: 20px;
   bottom: 10px;
@@ -49,7 +46,3 @@ export const Question = styled.div`
   right: -25px;
   transform: rotate(4deg);
 `;
-
-export const Puzzled = styled(PUZZLED)``;
-export const CatPot = styled(CATPOT)``;
-export const CatBack = styled(CATBACK)``;

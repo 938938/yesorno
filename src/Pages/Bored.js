@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ActiveAPI } from '../store/activeSlice';
-import Title from '../UI/Title';
 
 const Bored = () => {
   const dispatch = useDispatch();
@@ -22,10 +21,10 @@ const Bored = () => {
   }, []);
   return (
     <div>
-      <Title>
+      <div>
         <h1>지루함과 싸워보자!</h1>
         <p>&#62; 지루하지 않기 위한 활동을 찾기!</p>
-      </Title>
+      </div>
       {activeData}
       <br />
       {linkData}

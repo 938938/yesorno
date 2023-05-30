@@ -7,7 +7,7 @@ import PUZZLED from '../images/puzzled.png';
 import { useSelector } from 'react-redux';
 
 const AnswerBox = (props) => {
-  const answer = useSelector((state) => state.data.answer);
+  const answer = useSelector((state) => state.answer.answer);
   // const answer = props.answer;
   return (
     <AnswerBoxDiv>

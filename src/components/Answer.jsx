@@ -1,5 +1,4 @@
-import AnswerText from '../UI/AnswerText';
-import Image from '../UI/Image';
+import * as S from './Answer.style';
 import { useSelector } from 'react-redux';
 
 const Answer = () => {
@@ -9,12 +8,12 @@ const Answer = () => {
   return (
     <div>
       <div className='question'>
-        <AnswerText>Q: {ask}?</AnswerText>
+        <S.Text>Q: {ask}?</S.Text>
       </div>
       <div>
-        <AnswerText>A: {answer}</AnswerText>
+        <S.Text>A: {answer}</S.Text>
         <div>
-          <Image>
+          <S.Image>
             <img
               src={urlImg}
               alt={
@@ -23,7 +22,7 @@ const Answer = () => {
                   : '긍정을 나타내는 gif 파일'
               }
             />
-          </Image>
+          </S.Image>
         </div>
       </div>
     </div>

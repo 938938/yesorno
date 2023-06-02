@@ -1,9 +1,8 @@
 import React, { useRef, useState } from 'react';
+import * as S from './Question.style';
 import { useDispatch } from 'react-redux';
 import { asyncAPI } from '../store/answerSlice';
 import { setAsk } from '../store/askSlice';
-import Form from '../UI/Form';
-import Options from '../UI/Options';
 
 const defaultKeyword = [
   '오늘 치킨을 먹을까?',
@@ -13,7 +12,7 @@ const defaultKeyword = [
   '오늘 전화를 할까?',
 ];
 
-const QuestionForm = () => {
+const Question = () => {
   const inputRef = useRef();
   const [on, setOn] = useState(false);
   const [selected, setSelected] = useState(-1);
@@ -61,7 +60,7 @@ const QuestionForm = () => {
 
   return (
     <section onKeyUp={onKeyUp}>
-      <Form onSubmit={onSubmit}>
+      <S.Form onSubmit={onSubmit}>
         <input
           ref={inputRef}
           placeholder='이곳에 질문해주세요'
@@ -70,9 +69,9 @@ const QuestionForm = () => {
           onFocus={onFocus}
         />
         <button onClick={onSubmit}>묻기!</button>
-      </Form>
+      </S.Form>
       {on && option && (
-        <Options setOn={setOn}>
+        <S.Option setOn={setOn}>
           {option.map((ele, idx) => {
             return (
               <li
@@ -85,10 +84,10 @@ const QuestionForm = () => {
             );
           })}
           <button onClick={() => setOn(false)}>X</button>
-        </Options>
+        </S.Option>
       )}
     </section>
   );
 };
 
-export default QuestionForm;
+export default Question;

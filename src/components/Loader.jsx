@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { BLACK, MIDNIGHTEXPRESS } from '../global/globalColor';
 
 const Loader = () => {
-  return <LoaderIcon></LoaderIcon>;
+  return <LoaderIcon />;
 };
 
 export default Loader;
@@ -71,6 +71,3 @@ const LoaderIcon = styled.div`
     animation: ${Jump} 0.5s linear infinite;
   }
 `;
-
-
-

@@ -18,16 +18,11 @@ export const AnswerCard = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
 
   transform: rotate(4deg);
-
-  .question {
-    margin-bottom: 20px;
-  }
 `;
 
 export const Cat = styled.div`

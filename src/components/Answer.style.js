@@ -17,3 +17,7 @@ export const Image = styled.div`
     margin-top: 10px;
   }
 `;
+
+export const Question = styled.div`
+  margin-bottom: 20px;
+`;

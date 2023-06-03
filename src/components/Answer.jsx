@@ -7,9 +7,9 @@ const Answer = () => {
   const ask = useSelector((state) => state.ask.ask);
   return (
     <div>
-      <div className='question'>
+      <S.Question>
         <S.Text>Q: {ask}?</S.Text>
-      </div>
+      </S.Question>
       <div>
         <S.Text>A: {answer}</S.Text>
         <div>

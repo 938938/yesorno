@@ -11,7 +11,7 @@ export const AppBack = styled.section`
   border: 3px solid ${MIDNIGHTEXPRESS};
   transform: rotate(-2deg);
   background-color: ${(props) =>
-    props.bgColor ? props.bgColor : `${CREAMGRAY}`};
+    props.bgcolor ? props.bgcolor : `${CREAMGRAY}`};
   transition: all 1s;
   margin-top: 30px;
 

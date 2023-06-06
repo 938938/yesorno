@@ -3,10 +3,10 @@ import * as S from './App.style';
 import Main from './Pages/Main';
 
 function App() {
-  const bgColor = useSelector((state) => state.answer.bgColor);
+  const bgcolor = useSelector((state) => state.answer.bgcolor);
 
   return (
-    <S.AppBack bgColor={bgColor}>
+    <S.AppBack bgcolor={bgcolor}>
       <S.AppFront>
         <Main />
       </S.AppFront>

@@ -71,7 +71,7 @@ const Question = () => {
         <button onClick={onSubmit}>묻기!</button>
       </S.Form>
       {on && option && (
-        <S.Option setOn={setOn}>
+        <S.Option>
           {option.map((ele, idx) => {
             return (
               <li

@@ -43,12 +43,12 @@ const no = [
 
 const answerSlice = createSlice({
   name: 'answerSlice',
-  initialState: { answer: '', image: '', bgColor: '' },
+  initialState: { answer: '', image: '', bgcolor: '' },
   extraReducers: (builder) => {
     builder.addCase(asyncAPI.pending, (state, action) => {
       state.answer = '답변을 불러오는 중입니다.';
       state.image = SPINNER;
-      state.bgColor = `${MIDNIGHTEXPRESS}`;
+      state.bgcolor = `${MIDNIGHTEXPRESS}`;
     });
     builder.addCase(asyncAPI.fulfilled, (state, action) => {
       console.log(action.payload.image);
@@ -67,7 +67,7 @@ const answerSlice = createSlice({
           : yes[Math.floor(Math.random() * yes.length)];
       state.answer = output;
       state.image = action.payload.image;
-      state.bgColor =
+      state.bgcolor =
         action.payload.answer === 'no' ? `${RADICALRED}` : `${DARKTURQUOISE}`;
     });
     builder.addCase(asyncAPI.rejected, (state, action) => {
